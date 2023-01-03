@@ -7,7 +7,7 @@ export default function Document() {
                 <meta name="description" content="Gallery using nextJS" />
                 <link rel="icon" href="/favicon.ico" />
             </Head>
-            <body>
+            <body className="bg-background">
                 <Main />
                 <NextScript />
             </body>
