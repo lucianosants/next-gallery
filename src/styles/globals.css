@@ -58,3 +58,43 @@
         @apply bg-tertiary_container text-on_primary_container;
     }
 }
+
+@layer components {
+    .footer {
+        @apply py-4 border-t text-on_background border-outline bg-background border-opacity-40;
+    }
+
+    .footer__wrapper {
+        @apply container flex flex-wrap items-center justify-center px-6 mx-auto text-center;
+    }
+
+    .footer__author {
+        @apply text-primary;
+    }
+
+    .footer__author:hover {
+        @apply underline text-secondary;
+    }
+
+    .footer__links {
+        @apply flex justify-center gap-2;
+    }
+
+    .footer__item {
+        @apply p-1 rounded-full bg-secondary_container text-on_secondary_container;
+    }
+
+    .footer__item:hover {
+        @apply bg-tertiary_container;
+    }
+
+    .footer__item:active {
+        @apply bg-primary text-on_primary;
+    }
+
+    @media (min-width: 520px) {
+        .footer__wrapper {
+            @apply justify-between;
+        }
+    }
+}
