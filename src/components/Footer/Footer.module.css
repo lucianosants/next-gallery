@@ -1,0 +1,37 @@
+.footer {
+    @apply px-6 py-4 border-t text-on_background border-outline bg-background border-opacity-40;
+}
+
+.wrapper {
+    @apply container flex flex-wrap items-center justify-center mx-auto text-center;
+}
+
+.author {
+    @apply text-primary;
+}
+
+.author:hover {
+    @apply underline text-secondary;
+}
+
+.links {
+    @apply flex justify-center gap-2;
+}
+
+.item {
+    @apply p-1 rounded-full bg-secondary_container text-on_secondary_container;
+}
+
+.item:hover {
+    @apply bg-tertiary_container;
+}
+
+.item:active {
+    @apply bg-primary text-on_primary;
+}
+
+@media (min-width: 520px) {
+    .wrapper {
+        @apply justify-between;
+    }
+}

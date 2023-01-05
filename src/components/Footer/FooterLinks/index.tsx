@@ -1,4 +1,7 @@
 import { GithubLogo, InstagramLogo, LinkedinLogo } from 'phosphor-react';
+
+import styles from '../Footer.module.css';
+
 import Link from './Link';
 
 export default function FooterLinks() {
@@ -21,7 +24,7 @@ export default function FooterLinks() {
     ];
 
     return (
-        <ul className="footer__links">
+        <ul className={styles.links}>
             {links.map((link, i) => {
                 return (
                     <Link key={i} address={link.link} sr_only={link.sr_only}>

@@ -1,0 +1,7 @@
+.container {
+    @apply py-6 bg-background text-on_background;
+}
+
+.wrapper {
+    @apply container flex flex-wrap justify-center mx-auto lg:justify-around xl:justify-between;
+}

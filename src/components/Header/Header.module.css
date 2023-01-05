@@ -1,0 +1,59 @@
+.header {
+    @apply px-6 py-4 border-b border-opacity-50 bg-background border-outline;
+}
+
+.wrapper {
+    @apply container flex flex-wrap items-center justify-between mx-auto text-center;
+}
+
+.brand {
+    @apply flex items-center gap-1;
+}
+
+.title {
+    @apply text-2xl uppercase text-on_background;
+}
+
+.logo {
+    @apply w-7;
+}
+
+.menu {
+    @apply flex items-center gap-2;
+}
+
+.theme {
+    @apply rounded-full h-9 w-9;
+}
+
+.btn--theme {
+    @apply flex items-center justify-center w-full h-full appearance-none cursor-pointer;
+}
+
+.btn--theme:hover {
+    @apply rounded-full bg-secondary_container;
+}
+
+.btn--theme:active {
+    @apply bg-primary_container;
+}
+
+.btn--theme::before {
+    @apply flex items-center mt-1.5 content-[url('/icons/sun.svg')];
+}
+
+.btn--theme:checked:before {
+    @apply mt-1.5 content-[url('/icons/moon.svg')];
+}
+
+.btn--filter {
+    @apply flex gap-1 px-3 py-1.5 font-medium transition-colors rounded-full bg-fuchsia-300 text-fuchsia-900;
+}
+
+.btn--filter:hover {
+    @apply bg-primary_container text-on_primary_container;
+}
+
+.btn--filter:active {
+    @apply bg-tertiary_container text-on_primary_container;
+}

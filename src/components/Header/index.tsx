@@ -1,36 +1,38 @@
 import { SlidersHorizontal } from 'phosphor-react';
 
+import styles from './Header.module.css';
+
 export default function Header() {
     return (
-        <header className="header">
-            <nav className="header__wrapper">
+        <header className={styles.header}>
+            <nav className={styles.wrapper}>
                 <div
-                    className="header__brand"
+                    className={styles.brand}
                     aria-label="Next Gallery"
                     role="textbox"
                     tabIndex={0}>
-                    <h2 className="header__title">Next</h2>
+                    <h2 className={styles.title}>Next</h2>
 
                     <img
-                        className="header__logo"
+                        className={styles.logo}
                         src="/assets/logo.svg"
                         alt="Logo from next Gallery"
                         tabIndex={0}
                     />
                 </div>
 
-                <div className="header__menu" role="group" aria-label="menu">
-                    <label className="header__theme">
+                <div className={styles.menu} role="group" aria-label="menu">
+                    <label className={styles.theme}>
                         <input
                             type="checkbox"
-                            className="header__btn--theme"
+                            className={styles['btn--theme']}
                             title="choose your theme"
                             onChange={() => console.log('changed theme')}
                         />
                     </label>
 
                     <button
-                        className="header__btn--filter"
+                        className={styles['btn--filter']}
                         type="button"
                         title="Filter by items"
                         onClick={() => console.log('filtered')}>

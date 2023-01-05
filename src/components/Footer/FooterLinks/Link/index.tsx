@@ -4,9 +4,11 @@ interface LinkProps {
     sr_only: string;
 }
 
+import styles from '../../Footer.module.css';
+
 export default function Link({ address, children, sr_only }: LinkProps) {
     return (
-        <li className="footer__item">
+        <li className={styles.item}>
             <a
                 aria-label={`Link to ${sr_only}`}
                 title={`Link to ${sr_only}`}

@@ -1,16 +1,18 @@
 import FooterLinks from './FooterLinks';
 
+import styles from './Footer.module.css';
+
 export default function Footer() {
     return (
-        <footer className="footer">
-            <section className="footer__wrapper">
+        <footer className={styles.footer}>
+            <section className={styles.wrapper}>
                 <div
                     role="textbox"
                     aria-label="Next Gallery 2023 current"
                     title="Next Gallery">
                     &copy; {new Date().getFullYear()} - Next Gallery by{' '}
                     <a
-                        className="footer__author"
+                        className={styles.author}
                         href="https://github.com/lucianosants"
                         aria-label="Link to Github">
                         lucianosants
