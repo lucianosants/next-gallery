@@ -1,0 +1,15 @@
+.image {
+    @apply flex-auto lg:flex-[20%] md:flex-[33%] p-2 cursor-pointer;
+}
+
+.image:hover {
+    @apply md:hover:scale-105;
+}
+
+.content {
+    @apply w-full h-full mx-auto border border-outline rounded-2xl;
+}
+
+.content:hover {
+    @apply border-primary;
+}
