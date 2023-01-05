@@ -103,3 +103,13 @@
         }
     }
 }
+
+@layer components {
+    .container__main {
+        @apply bg-background text-on_background;
+    }
+
+    .container__wrapper {
+        @apply container flex flex-wrap-reverse justify-center mx-auto lg:justify-around xl:justify-between;
+    }
+}
