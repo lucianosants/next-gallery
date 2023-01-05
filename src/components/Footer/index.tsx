@@ -14,6 +14,8 @@ export default function Footer() {
                     <a
                         className={styles.author}
                         href="https://github.com/lucianosants"
+                        target="_blank"
+                        rel="noreferrer"
                         aria-label="Link to Github">
                         lucianosants
                     </a>
