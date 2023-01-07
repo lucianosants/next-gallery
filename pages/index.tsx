@@ -22,7 +22,7 @@ const Home = ({ data }: HomeProps) => {
 };
 
 export const getServerSideProps: GetServerSideProps = async () => {
-    const url = 'http://localhost:3000/api/photos';
+    const url = 'https://localhost:3000/api/photos';
     const data = await getAllPhotos(url);
 
     return {
