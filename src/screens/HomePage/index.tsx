@@ -1,18 +1,27 @@
 import Container from '@src/components/Container';
 import Image from '@src/components/Image';
 
-export default function HomePage() {
+import { PhotosData } from '@src/types/photos';
+
+export interface PhotoProps {
+    photos: PhotosData[];
+}
+
+export default function HomePage({ photos }: PhotoProps) {
     return (
         <Container>
-            <Image src="https://source.unsplash.com/random/1" alt="" link="#" />
-            <Image src="https://source.unsplash.com/random/2" alt="" link="#" />
-            <Image src="https://source.unsplash.com/random/3" alt="" link="#" />
-            <Image src="https://source.unsplash.com/random/4" alt="" link="#" />
-            <Image src="https://source.unsplash.com/random/5" alt="" link="#" />
-            <Image src="https://source.unsplash.com/random/6" alt="" link="#" />
-            <Image src="https://source.unsplash.com/random/7" alt="" link="#" />
-            <Image src="https://source.unsplash.com/random/8" alt="" link="#" />
-            <Image src="https://source.unsplash.com/random/9" alt="" link="#" />
+            {photos.map((photo, i) => {
+                const url = photo.properties.image.files[0].file.url;
+
+                return (
+                    <Image
+                        key={photo.id}
+                        src={url}
+                        alt={photo.properties.title.title[0].plain_text}
+                        link={url}
+                    />
+                );
+            })}
         </Container>
     );
 }
