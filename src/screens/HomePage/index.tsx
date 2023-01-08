@@ -10,7 +10,7 @@ export interface PhotoProps {
 export default function HomePage({ photos }: PhotoProps) {
     return (
         <Container>
-            {photos.map((photo, i) => {
+            {photos?.map((photo, i) => {
                 const url = photo.properties.image.files[0].file.url;
 
                 return (
