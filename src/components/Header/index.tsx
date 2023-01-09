@@ -1,4 +1,6 @@
+import Link from 'next/link';
 import { SlidersHorizontal } from 'phosphor-react';
+import Filters from './Filters';
 
 import styles from './Header.module.css';
 
@@ -31,14 +33,15 @@ export default function Header() {
                         />
                     </label>
 
-                    <button
-                        className={styles['btn--filter']}
-                        type="button"
-                        title="Filter by items"
-                        onClick={() => console.log('filtered')}>
-                        <SlidersHorizontal size={24} weight="fill" />
-                        Filter
-                    </button>
+                    <details className="cursor-pointer" title="Filter by items">
+                        <summary className="flex gap-1">
+                            <div className={styles['btn--filter']}>
+                                <SlidersHorizontal size={24} weight="fill" />
+                                Filter
+                            </div>
+                        </summary>
+                        <Filters />
+                    </details>
                 </div>
             </nav>
         </header>

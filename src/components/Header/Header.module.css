@@ -47,7 +47,7 @@
 }
 
 .btn--filter {
-    @apply flex gap-1 px-3 py-1.5 font-medium transition-colors rounded-full bg-fuchsia-300 text-fuchsia-900;
+    @apply flex gap-1 px-3 py-1.5 font-medium transition-colors rounded-full bg-fuchsia-300 text-fuchsia-900 relative;
 }
 
 .btn--filter:hover {
