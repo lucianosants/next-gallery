@@ -1,0 +1,16 @@
+.filters {
+    @apply absolute flex flex-col gap-2 px-1 py-2 top-[4.25rem] bg-primary text-on_primary rounded-xl z-10;
+}
+
+.filters::before {
+    @apply content-[''] w-12 h-6 bg-primary top-[-1.875rem] absolute left-[20%];
+    clip-path: polygon(50% 80%, 30% 100%, 70% 100%);
+}
+
+.filters__item {
+    @apply flex px-4 py-1;
+}
+
+.filters__item:hover {
+    @apply rounded-lg bg-primary_container text-on_primary_container;
+}
