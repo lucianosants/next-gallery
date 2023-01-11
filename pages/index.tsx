@@ -1,20 +1,32 @@
 import Head from 'next/head';
+import { GetStaticProps } from 'next';
 
-import { useGetAllPhotos } from '@src/hooks/useGetAllPhotos';
+import { getAllPhotos } from '@src/data/getAllPhotos';
 
 import HomePage from '@src/screens/HomePage';
+import { PhotosData } from '@src/types/photos';
 
-const Home = () => {
-    const { data: photos } = useGetAllPhotos();
+interface HomeProps {
+    data: PhotosData[];
+}
 
+const Home = ({ data }: HomeProps) => {
     return (
         <>
             <Head>
                 <title>Next Gallery</title>
             </Head>
-            <HomePage photos={photos} />
+            <HomePage photos={data} />
         </>
     );
+};
+
+export const getStaticProps: GetStaticProps = async () => {
+    const data = await getAllPhotos();
+
+    return {
+        props: { data },
+    };
 };
 
 export default Home;

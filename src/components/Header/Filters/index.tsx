@@ -12,19 +12,19 @@ export default function Filters() {
             </li>
 
             <li>
-                <Link className={styles.filters__item} href="/filter?q=cats">
+                <Link className={styles.filters__item} href="/filter/cats">
                     Cats
                 </Link>
             </li>
 
             <li>
-                <Link className={styles.filters__item} href="/filter?q=dogs">
+                <Link className={styles.filters__item} href="/filter/dogs">
                     Dogs
                 </Link>
             </li>
 
             <li>
-                <Link className={styles.filters__item} href="/filter?q=funny">
+                <Link className={styles.filters__item} href="/filter/funny">
                     Funny
                 </Link>
             </li>
