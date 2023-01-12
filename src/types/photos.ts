@@ -1,13 +1,7 @@
 export type PhotoId = string;
 
 export type PhotoImage = {
-    files: [
-        {
-            file: {
-                url: string;
-            };
-        }
-    ];
+    url: string;
 };
 
 export type PhotoTag = {
