@@ -1,10 +1,20 @@
-import Link from 'next/link';
 import { SlidersHorizontal } from 'phosphor-react';
+import { useEffect, useState } from 'react';
+
 import Filters from './Filters';
 
 import styles from './Header.module.css';
 
 export default function Header() {
+    const [isDark, setIsDark] = useState(true);
+
+    useEffect(() => {
+        const body = document.body as HTMLBodyElement;
+        !isDark
+            ? body.classList.add('light-theme')
+            : body.classList.remove('light-theme');
+    }, [isDark]);
+
     return (
         <header className={styles.header}>
             <nav className={styles.wrapper}>
@@ -29,7 +39,7 @@ export default function Header() {
                             type="checkbox"
                             className={styles['btn--theme']}
                             title="choose your theme"
-                            onChange={() => console.log('changed theme')}
+                            onChange={() => setIsDark(!isDark)}
                         />
                     </label>
 
