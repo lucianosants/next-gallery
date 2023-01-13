@@ -1,0 +1,23 @@
+.photo {
+    @apply flex flex-col max-w-4xl gap-4 p-6 mx-auto;
+}
+
+.photo__button {
+    @apply w-24 p-2 transition-colors rounded-full text-on_primary bg-primary;
+}
+
+.photo__button:hover {
+    @apply bg-primary_container text-on_primary_container;
+}
+
+.photo__title {
+    @apply text-lg font-bold text-center text-on_background;
+}
+
+.photo__content {
+    @apply w-full mx-auto;
+}
+
+.photo__image {
+    @apply w-full h-full rounded-lg;
+}
