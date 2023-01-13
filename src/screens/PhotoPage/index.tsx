@@ -8,7 +8,6 @@ interface PhotoPageProps {
 
 export default function PhotoPage({ url, title }: PhotoPageProps) {
     const router = useRouter();
-    console.log(router);
     return (
         <div className={style.photo}>
             <button
