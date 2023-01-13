@@ -16,7 +16,7 @@ export default function PhotoPage({ url, title }: PhotoPageProps) {
                 className={style.photo__button}
                 title="Back"
                 onClick={() => router.back()}>
-                &larr; Back
+                Back
             </button>
 
             <h2 className={style.photo__title}>{title}</h2>
