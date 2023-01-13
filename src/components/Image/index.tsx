@@ -1,3 +1,4 @@
+import Link from 'next/link';
 import styles from './Image.module.css';
 
 interface ImageProps {
@@ -8,8 +9,8 @@ interface ImageProps {
 
 export default function Image({ link, src, alt }: ImageProps) {
     return (
-        <a href={link} className={styles.image}>
+        <Link href={`/photos/${link}`} className={styles.image} title={alt}>
             <img src={src} alt={alt} className={styles.content} />
-        </a>
+        </Link>
     );
 }

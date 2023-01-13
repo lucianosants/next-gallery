@@ -16,7 +16,7 @@ export default function HomePage({ photos }: PhotoProps) {
                         key={photo.id}
                         src={photo.properties.image.url}
                         alt={photo.properties.title.title[0].plain_text}
-                        link={photo.properties.image.url}
+                        link={photo.id}
                     />
                 );
             })}
